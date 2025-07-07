@@ -62,6 +62,12 @@ int main(int argc, char const *argv[])
     std::cout << "Algoritmo KMP:\n\tOcurrencias = " << occur << "\n\tTimepo de ejecucion = " << running_time << "\n" << std::endl;
 
     std::cout << "Algoritmo Suffix-Array:\n\tOcurrencias = " << occur_total << "\n\tTimepo de ejecucion = " << time << "\n" << std::endl;
+    
+    start = std::chrono::high_resolution_clock::now();
+    occur = rabinkarpSearch(complete_text, pattern, offsets); // tomamos el tiempo del algoritmo con el text concatenado de todos los archivos
+    end = std::chrono::high_resolution_clock::now();
+    running_time = std::chrono::duration<double>(end - start).count();
 
+    std::cout << "Algoritmo Rabin-Karp:\n\tOcurrencias = " << occur << "\n\tTimepo de ejecucion = " << running_time << "\n" << std::endl;
     return 0;
 }
