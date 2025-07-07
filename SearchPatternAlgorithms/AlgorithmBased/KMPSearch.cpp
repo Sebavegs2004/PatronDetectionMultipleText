@@ -4,9 +4,6 @@
 #include <string>
 #include <vector>
 
-#include <sys/resource.h>
-
-
 // Funcion que construye el arreglo LPS (Longest Prefix Suffix)
 // El arreglo LPS indica el largo del prefijo mas largo que tambien es sufijo
 // para cada posición del patrón, lo que permite saltar comparaciones innecesarias
@@ -51,9 +48,6 @@ int kmpSearch(std::string txt, std::string pat) {
 
 
     constructLps(pat, lps); // construimos el arreglo LPS
-    std::cout<<"lps.size"<<lps.size()<<" sizeofint: "<<sizeof(int)<<std::endl;
-    std::cout<<"Bytes usados por vector :"<< lps.size() * sizeof(int)<<std::endl;
-
     // Punteros i y j para recorrer el texto y el patrón
     int i = 0;
     int j = 0;
