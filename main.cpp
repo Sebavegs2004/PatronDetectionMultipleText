@@ -54,6 +54,8 @@ int main(int argc, char const *argv[])
 
     std::cout << "Algoritmo Boyer-Moore:\n\tOcurrencias = " << occur << "\n\tTimepo de ejecucion = " << running_time << "\n" << std::endl;
 
+    std::cout << "Algoritmo KMP:\n\tOcurrencias = " << occur << "\n\tTimepo de ejecucion = " << running_time << "\n" << std::endl;
+
     std::cout << "Algoritmo Suffix-Array:\n\tOcurrencias = " << occur_total << "\n\tTimepo de ejecucion = " << time << "\n" << std::endl;
 
     return 0;
