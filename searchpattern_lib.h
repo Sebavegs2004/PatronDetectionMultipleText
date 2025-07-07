@@ -6,6 +6,7 @@
 #include <vector>
 
 int boyermooreSearch(std::string txt, std::string pat);
+int kmpSearch(std::string txt, std::string pat);
 std::vector<int> buildSuffArr(std::string text);
 int suffixArraySearch( std::string text, std::string pat, std::vector<int> sufArr);
 
