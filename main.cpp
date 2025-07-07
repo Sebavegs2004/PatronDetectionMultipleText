@@ -54,10 +54,10 @@ int main(int argc, char const *argv[])
 
     std::cout << "Algoritmo Boyer-Moore:\n\tOcurrencias = " << occur << "\n\tTimepo de ejecucion = " << running_time << "\n" << std::endl;
 
-    auto start = std::chrono::high_resolution_clock::now();
-    int occur = kmpSearch(complete_text, pattern); // tomamos el tiempo del algoritmo con el text concatenado de todos los archivos
-    auto end = std::chrono::high_resolution_clock::now();
-    double running_time = std::chrono::duration<double>(end - start).count();
+    start = std::chrono::high_resolution_clock::now();
+    occur = kmpSearch(complete_text, pattern); // tomamos el tiempo del algoritmo con el text concatenado de todos los archivos
+    end = std::chrono::high_resolution_clock::now();
+    running_time = std::chrono::duration<double>(end - start).count();
 
     std::cout << "Algoritmo KMP:\n\tOcurrencias = " << occur << "\n\tTimepo de ejecucion = " << running_time << "\n" << std::endl;
 
